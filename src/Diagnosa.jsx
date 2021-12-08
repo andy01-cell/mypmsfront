@@ -1,18 +1,11 @@
 import * as React from "react";
 import { useState } from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { useHistory } from "react-router-dom";
-import { collection, addDoc } from "firebase/firestore";
-import { app, db } from "./config/FirebaseApp";
-import Daftar from "./Daftar";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 const Diagnosa = () => {
   let history = useHistory();
@@ -24,18 +17,19 @@ const Diagnosa = () => {
     usia: "",
   });
 
-  async function inputClick() {
-    // Add a new document with a generated id.
-    const docRef = await addDoc(collection(db, "regist"), {
-      nama: state.nama,
-      tgl: state.tgl,
-      alamat: state.alamat,
-      usia: state.usia,
-      hp: state.hp,
-    });
-    console.log("Document written with ID: ", docRef.id);
+  async function inputClick(e) {
+    e.preventDefault()
     console.log("state: ", state);
-    history.push("/daftar");
+    history.push({
+      pathname: "/daftar",
+      state: {
+        namap: state.nama,
+        tglp: state.tgl,
+        alamatp: state.alamat,
+        usiap: state.usia,
+        hpp: state.hp,
+      },
+    });
   }
 
   const onHandledChanged = (event) => {
@@ -61,28 +55,15 @@ const Diagnosa = () => {
               paddingTop: "15vh",
             }}
           >
-            {/* <Typography
-            variant="h5"
-            textAlign="start"
-            style={{
-              fontFamily: "Mulish",
-              // width: "60vh",
-              padding: "80px 40px 16px",
-              color: "#fff",
-            }}
-          >
-            {aisvm}
-          </Typography> */}
             <Typography
-              variant="h3"
+              variant="h4"
               textAlign="center"
               color="white"
               style={{
-                fontFamily: "Mulish",
                 marginLeft: "30px",
               }}
             >
-              Diagnosa Premenstrual Syndrome
+              <b>Diagnosa Premenstrual Syndrome</b>
             </Typography>
             <Grid item marginTop="5ch">
               <Paper
@@ -96,7 +77,7 @@ const Diagnosa = () => {
               >
                 <Grid container>
                   <Grid item xs={12} md={12} textAlign="center">
-                    <h2>Registrasi</h2>
+                    <h2>Biodata</h2>
                   </Grid>
                   <Grid item xs={0.75} md={0.75} />
                   <Grid item xs={10} md={10}>

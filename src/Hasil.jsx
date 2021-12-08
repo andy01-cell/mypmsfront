@@ -2,9 +2,8 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { useHistory } from "react-router";
-import { border, borderRadius } from "@mui/system";
 
 const Hasil = () => {
   const history = useHistory();
@@ -35,7 +34,7 @@ const Hasil = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             textAlign="center"
             color="white"
             style={{
@@ -43,7 +42,7 @@ const Hasil = () => {
               marginLeft: "30px",
             }}
           >
-            Diagnosa Premenstrual Syndrome
+            <b>Diagnosa Premenstrual Syndrome</b>
           </Typography>
           <Grid item marginTop="5ch">
             <Paper

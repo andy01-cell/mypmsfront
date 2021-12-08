@@ -2,10 +2,13 @@ import * as React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { pms } from "./assets";
+import { useHistory } from "react-router";
+
 
 const Informasi = () => {
+  let history = useHistory();
   return (
     <div>
       <Grid container>
@@ -24,22 +27,20 @@ const Informasi = () => {
             variant="h5"
             color="white"
             style={{
-              fontFamily: "Mulish",
               marginLeft: "30px",
             }}
           >
-            Apa itu
+            APA ITU
           </Typography>
 
           <Typography
-            variant="h3"
+            variant="h4"
             color="white"
             style={{
-              fontFamily: "Mulish",
               marginLeft: "30px",
             }}
           >
-            Premenstrual Syndrome?
+            <b>PREMENSTRUAL SYNDROME?</b>
           </Typography>
           <Grid item marginTop="5ch" height="170vh">
             <Paper
@@ -70,7 +71,7 @@ const Informasi = () => {
                     aktivitas harian dan selanjutnya akan menghilang bersamaan
                     dengan selesainya fase menstruasi.
                   </p> */}
-                  <Typography variant="p" fontSize="20px" color="#503C3C">
+                  <Typography variant="p" fontSize="20px" color="#503C3C" >
                     &emsp;Premenstrual syndrome (PMS) adalah suatu keadaan
                     dimana seorang wanita merasakan beberapa perubahan pada
                     tubuh baik secara fisik, emosi, maupun perilaku yang terjadi
@@ -158,6 +159,7 @@ const Informasi = () => {
                         cursor: "pointer",
                         color: "blue",
                       }}
+                      onClick={() => history.push("/gejala pms")}
                     >
                       klik disini
                     </b>
@@ -178,6 +180,7 @@ const Informasi = () => {
                         cursor: "pointer",
                         color: "blue",
                       }}
+                      onClick={() => history.push("/diagnosa")}
                     >
                       klik disini
                     </b>

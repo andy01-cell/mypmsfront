@@ -1,15 +1,12 @@
 import { useState } from "react";
 import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
-import FormHelperText from "@mui/material/FormHelperText";
 import Checkbox from "@mui/material/Checkbox";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
-import TextField from "@mui/material/TextField";
+import { Paper } from "@mui/material";
 import Button from "@mui/material/Button";
 import { collection, addDoc } from "firebase/firestore";
 import { app, db } from "./config/FirebaseApp";
@@ -18,6 +15,7 @@ import { useHistory } from "react-router-dom";
 
 const Daftar = () => {
   const history = useHistory();
+  const diagnosas = history.location.state;
   const [state, setState] = useState({
     sensitif: false,
     labil: false,
@@ -196,30 +194,36 @@ const Daftar = () => {
           },
         });
         const docRef = addDoc(collection(db, "daftardiagnosa"), {
-          sensitif: state.sensitif,
-          labil: state.labil,
-          cemas: state.cemas,
-          saraf: state.saraf,
-          depresiri: state.depresiri,
-          nyeri: state.nyeri,
-          endema: state.endema,
-          perut: state.perut,
-          berat: state.berat,
-          bengkak: state.bengkak,
-          pusing: state.pusing,
-          lapar: state.Lapar,
-          jantung: state.jantung,
-          pinsang: state.pinsang,
-          depresi: state.depresi,
-          tidur: state.tidur,
-          stres: state.stres,
-          verbalisasi: state.verbalisasi,
-          menangis: state.menangis,
-          pelupa: state.pelupa,
-          lemah: state.lemah,
-          bingung: state.bingung,
-          bundir: state.bundir,
+          _sensitif: state.sensitif,
+          _labil: state.labil,
+          _cemas: state.cemas,
+          _saraf: state.saraf,
+          _depresiri: state.depresiri,
+          _nyeri: state.nyeri,
+          _endema: state.endema,
+          _perut: state.perut,
+          _berat: state.berat,
+          _bengkak: state.bengkak,
+          _pusing: state.pusing,
+          _lapar: state.Lapar,
+          _jantung: state.jantung,
+          _pinsang: state.pinsang,
+          _depresi: state.depresi,
+          _tidur: state.tidur,
+          _stres: state.stres,
+          _verbalisasi: state.verbalisasi,
+          _menangis: state.menangis,
+          _pelupa: state.pelupa,
+          _lemah: state.lemah,
+          _bingung: state.bingung,
+          _bundir: state.bundir,
           persentase: persen,
+          tipe_pms : tipedesk,
+          nama_pasien : diagnosas.namap,
+          tanggal_lahir : diagnosas.tglp,
+          alamat : diagnosas.alamatp,
+          usia : diagnosas.usiap,
+          no_hp : diagnosas.hpp,
         });
       })
       .catch((err) => {
@@ -243,7 +247,7 @@ const Daftar = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             textAlign="center"
             color="white"
             style={{
@@ -251,7 +255,7 @@ const Daftar = () => {
               marginLeft: "30px",
             }}
           >
-            Diagnosa Premenstrual Syndrome
+            <b>Diagnosa Premenstrual Syndrome</b>
           </Typography>
           <Grid container justifyContent="center">
             <Grid item marginTop="5ch" xs={10} md={9}>

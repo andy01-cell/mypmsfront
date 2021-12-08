@@ -4,7 +4,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { useHistory } from "react-router-dom";
-import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import { logopms } from "./assets";
 
@@ -41,38 +40,41 @@ const AppBarComponent = () => {
               <Grid container justifyContent="end">
                 <Grid item xs={4} md={1.85}>
                   <Typography
-                    variant="h6"
+                    variant="p"
+                    fontSize="17px"
                     onClick={() => history.push("/")}
                     style={{
                       cursor: "pointer",
                     }}
                   >
-                    Informasi Umum
+                    <b>Informasi Umum</b>
                   </Typography>
                 </Grid>
                 <Grid item xs={0.2} md={0.1}></Grid>
                 <Grid item xs={4} md={1.2}>
                   <Typography
-                    variant="h6"
+                    variant="p"
+                    fontSize="17px"
                     onClick={() => history.push("/diagnosa")}
                     style={{
                       cursor: "pointer",
                     }}
                   >
-                    Diagnosa
+                    <b>Diagnosa</b>
                   </Typography>
                 </Grid>
                 <Grid item xs={0.2} md={0.1}></Grid>
                 <Grid item xs={3} md={1}>
                   <Typography
-                    variant="h6"
+                    variant="p"
+                    fontSize="17px"
                     type="button"
                     onClick={handleClick}
                     style={{
                       cursor: "pointer",
                     }}
                   >
-                    Bantuan
+                    <b>Bantuan</b>
                   </Typography>
                 </Grid>
               </Grid>

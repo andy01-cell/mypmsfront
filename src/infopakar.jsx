@@ -1,9 +1,8 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
-import { pms } from "./assets";
+import { Paper } from "@mui/material";
+import { dokterpria, dokterwanita, pms } from "./assets";
 import Avatar from "@mui/material/Avatar";
 
 const infopakar = () => {
@@ -22,15 +21,14 @@ const infopakar = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             textAlign="center"
             color="white"
             style={{
-              fontFamily: "Mulish",
               marginLeft: "30px",
             }}
           >
-            Informasi Pakar
+            <b>Informasi Pakar</b>
           </Typography>
           <Grid item>
             <Paper
@@ -56,7 +54,7 @@ const infopakar = () => {
                     <Grid item>
                       <Avatar
                         alt="Remy Sharp"
-                        src={pms}
+                        src={dokterwanita}
                         sx={{
                           width: {
                             md: 250,
@@ -76,6 +74,7 @@ const infopakar = () => {
                         color="#503C3C"
                         textAlign="center"
                       >
+                        {/* nama pakar */}
                         Dr.Bernard Mahfouz
                       </Typography>
                     </Grid>
@@ -83,13 +82,20 @@ const infopakar = () => {
                 </Grid>
                 <Grid item xs={0} md={0.5}></Grid>
                 <Grid item xs={11.8} md={8} paddingTop="20px">
-                  <Typography variant="p" fontSize="20px" color="#503C3C">
-                    &emsp;Premenstrual syndrome (PMS) adalah suatu keadaan
-                    dimana seorang wanita merasakan beberapa perubahan pada
-                    tubuh baik secara fisik, emosi, maupun perilaku yang terjadi
-                    sebelum maupun sedang menstruasi, sehingga akan mengganggu
-                    aktivitas harian dan selanjutnya akan menghilang bersamaan
-                    dengan selesainya fase menstruasi.
+                  <Typography variant="p" fontSize="23px" color="#503C3C">
+                    <b>Nama</b>  &emsp;  : Dr.blalala
+                    <br /> <br />
+                  </Typography>
+                  <Typography variant="p" fontSize="23px" color="#503C3C">
+                  <b>Alamat</b>&emsp;: Dr.blalala
+                    <br /> <br />
+                  </Typography>
+                  <Typography variant="p" fontSize="23px" color="#503C3C">
+                    <b>Instansi</b>&emsp;: Dr.blalala
+                    <br /> <br />
+                  </Typography>
+                  <Typography variant="p" fontSize="23px" color="#503C3C">
+                    <b>Email</b>&emsp;&emsp;: Dr.blalala
                     <br /> <br />
                   </Typography>
                 </Grid>

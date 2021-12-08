@@ -8,18 +8,8 @@ import gejalapms from "./gejalapms";
 import Hasil from "./Hasil";
 import infopakar from "./infopakar";
 import Informasi from "./Informasi";
-import { useState, useEffect } from "react";
 
 const RouterConfig = () => {
-  // const [state, setState] = useState(Diagnosa);
-  // useEffect(() => {
-  //   if (!state) {
-  //     Diagnosa();
-  //   }
-  //   else{
-  //     Daftar();
-  //   }
-  // }, []);
   return (
     <div>
       <BrowserRouter>

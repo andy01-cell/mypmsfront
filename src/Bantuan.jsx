@@ -1,10 +1,7 @@
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -29,17 +26,16 @@ const Bantuan = () => {
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             textAlign="center"
             color="white"
             style={{
-              fontFamily: "Mulish",
               marginLeft: "30px",
             }}
           >
-            Bantuan
+            <b>Bantuan</b>
           </Typography>
-          <Grid item>
+          <Grid item marginTop="20px">
             <Paper
               elevation={2}
               style={{
@@ -49,7 +45,7 @@ const Bantuan = () => {
                 // marginBottom: "32px",
               }}
             >
-              <Grid container justifyContent="space-evenly" margin="20px 0">
+              <Grid container justifyContent="center" margin="20px 0">
                 <Grid item>
                   <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
@@ -64,9 +60,7 @@ const Bantuan = () => {
                           Gejala-Gejala PMS
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Lizards are a widespread group of squamate reptiles,
-                          with over 6,000 species, ranging across all continents
-                          except Antarctica
+                        Menurut Dr. Guy E. Abraham, ahli kandungan dan kebidanan dari Fakultas Kedokteran UCLA, AS, membagi.....
                         </Typography>
                       </CardContent>
                     </CardActionArea>
@@ -87,6 +81,7 @@ const Bantuan = () => {
                   </Card>
                 </Grid>
                 <br />
+                <Grid item xs={12} md={1}/>
                 <Grid item>
                   <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
@@ -101,9 +96,10 @@ const Bantuan = () => {
                           Informasi Pakar
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                          Lizards are a widespread group of squamate reptiles,
-                          with over 6,000 species, ranging across all continents
-                          except Antarctica
+                          berikut biodata informasi pakar............................<br/>
+                          nama   :......<br/>
+                          alamat :.......
+
                         </Typography>
                       </CardContent>
                     </CardActionArea>
