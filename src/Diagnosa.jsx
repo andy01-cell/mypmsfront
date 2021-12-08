@@ -48,7 +48,7 @@ const Diagnosa = () => {
 
   return (
     <div>
-      <form onSubmit={inputClick} encType="multipart/form-data">
+      {/* <form onSubmit={inputClick} encType="multipart/form-data"> */}
         <Grid container>
           <Grid
             item
@@ -199,7 +199,7 @@ const Diagnosa = () => {
             </Grid>
           </Grid>
         </Grid>
-      </form>
+      {/* </form> */}
     </div>
   );
 };

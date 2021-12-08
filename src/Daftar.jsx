@@ -129,7 +129,7 @@ const Daftar = () => {
       })
       .then((res) => {
         const result = res.data.result;
-        console.log("post succes : ", result);
+        console.log("post succes : ", res);
         const hasilprediksi = result.prediction;
         if (hasilprediksi == 1) {
           persen = result.probabilities[0];

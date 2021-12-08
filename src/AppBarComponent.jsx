@@ -42,7 +42,7 @@ const AppBarComponent = () => {
                 <Grid item xs={4} md={1.85}>
                   <Typography
                     variant="h6"
-                    onClick={() => history.push("/")}
+                    onClick={() => history.push("/") }
                     style={{
                       cursor: "pointer",
                     }}
