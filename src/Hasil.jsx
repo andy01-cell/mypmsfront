@@ -2,13 +2,13 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import { useHistory } from "react-router";
-import { border, borderRadius } from "@mui/system";
 
 const Hasil = () => {
   const history = useHistory();
   const state = history.location.state;
+
   console.log("data => ", state);
 
   const styleCircle = {
@@ -22,7 +22,7 @@ const Hasil = () => {
 
   return (
     <div>
-      <Grid container>
+      <Grid container xs={12} md={12}>
         <Grid
           item
           xs={12}
@@ -30,154 +30,232 @@ const Hasil = () => {
           style={{
             background: "#C16C6C",
             height: "70vh",
-            width: "100vw",
+            // width: "100vw",
             paddingTop: "15vh",
           }}
         >
           <Typography
-            variant="h3"
+            variant="h4"
             textAlign="center"
             color="white"
             style={{
-              fontFamily: "Mulish",
+              textShadow: "2px 2px #8E7F7F",
               marginLeft: "30px",
             }}
           >
-            Diagnosa Premenstrual Syndrome
+            <b>DIAGNOSA PREMENSTRUAL SYNDROME</b>
           </Typography>
-          <Grid item marginTop="5ch">
-            <Paper
-              elevation={2}
-              style={{
-                marginLeft: 25,
-                marginRight: 25,
-                padding: 8,
-                marginTop: -30,
-              }}
-            >
-              <Grid
-                container
-                marginTop="0ch"
-                justifyContent="space-evenly"
-                direction={{
-                  xs: "column-reverse",
-                  md: "row",
+          <Grid container justifyContent="center">
+            <Grid item marginTop="25px" xs={11.8} md={11.8}>
+              <Paper
+                elevation={10}
+                style={{
+                  marginLeft: 25,
+                  marginRight: 25,
+                  padding: 8,
+                  // marginTop: -30,
                 }}
               >
-                <Grid item>
-                  <Box
-                    sx={{
-                      p: 2,
-                      border: "2px solid #C16C6C",
-                      width: "380px",
-                      height: "380px",
-                      marginTop: "40px",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <Grid container justifyContent="center">
-                      <Grid item></Grid>
-
-                      <Typography
-                        variant="h4"
-                        textAlign="center"
-                        color="#6F5A5A"
-                      >
-                        <b>Hasil Diagnosa</b>
-                      </Typography>
-                      <Typography
-                        variant="h5"
-                        color="#C16C6C"
-                        textAlign="center"
-                      >
-                        Anda Dominan Terkena <br /> Gangguan PMS tipe
-                      </Typography>
-                      <Grid container style={styleCircle} alignItems="center">
-                        <Grid
-                          item
-                          style={{
-                            textAlign: "center",
-                          }}
-                          alignItems="center"
-                        >
+                <Grid
+                  container
+                  marginTop="35px"
+                  justifyContent="space-evenly"
+                  direction={{
+                    xs: "column-reverse",
+                    md: "row",
+                  }}
+                  xs={12}
+                  md={12}
+                >
+                  <Grid item xs={9} md={3.5}>
+                    <Box
+                      sx={{
+                        p: 2,
+                        border: "2px solid #C16C6C",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <Grid container justifyContent="center" xs={12} md={12}>
+                        <Grid item xs={12} md={12}>
                           <Typography
-                            variant="p"
-                            fontSize="50px"
+                            variant="h4"
+                            textAlign="center"
                             color="#6F5A5A"
                           >
-                            <b>{state.type}</b>
-                            <br />
+                            <b>Hasil Diagnosa</b>
                           </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                          <Typography
+                            variant="h5"
+                            color="#C16C6C"
+                            textAlign="center"
+                            fontSize="20px"
+                            marginTop="10px"
+                          >
+                            <b>
+                              Anda Dominan Terkena <br /> Gangguan PMS tipe
+                            </b>
+                          </Typography>
+                        </Grid>
+                        <Grid
+                          container
+                          style={styleCircle}
+                          alignItems="center"
+                          marginTop="10px"
+                          xs={6}
+                          md={6}
+                        >
+                          <Grid
+                            item
+                            style={{
+                              textAlign: "center",
+                            }}
+                            alignItems="center"
+                            xs={12}
+                            md={12}
+                          >
+                            <Typography
+                              variant="p"
+                              fontSize="50px"
+                              color="#6F5A5A"
+                            >
+                              <b>{state.type}</b>
+                            </Typography>
+                          </Grid>
+                          <Grid
+                            item
+                            style={{
+                              textAlign: "center",
+                            }}
+                            alignItems="center"
+                            xs={12}
+                            md={12}
+                          >
+                            <Typography
+                              variant="p"
+                              fontSize="25px"
+                              color="#6E5A5A"
+                            >
+                              {state.typedesk}
+                            </Typography>
+                          </Grid>
+                        </Grid>
+                        <Grid item xs={12} md={12} marginTop="10px">
+                          <Typography
+                            variant="h5"
+                            color="#C16C6C"
+                            textAlign="center"
+                            fontSize="20px"
+                          >
+                            <b>Dengan Persentase Terbesar :</b>
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={2.5} md={2.5} marginTop="10px">
+                          <Box
+                            sx={{
+                              p: 2,
+                              // width: "50px",
+                              height: "20px",
+                              background: "#C16C6C",
+                              color: "white",
+                              borderRadius: "10px",
+                            }}
+                          >
+                            {state.data}%
+                          </Box>
+                        </Grid>
+                      </Grid>
+                    </Box>
+                  </Grid>
+                  <Grid item xs={9} md={6}>
+                    <Box
+                      sx={{
+                        p: 2,
+                        border: "2px solid #C16C6C",
+                        width: "740px",
+                        borderRadius: "10px",
+                      }}
+                    >
+                      <Grid container xs={12} md={12}>
+                        <Grid item xs={12} md={12}>
                           <Typography
                             variant="p"
-                            fontSize="25px"
-                            color="#6E5A5A"
+                            color="#6F5A5A"
+                            fontSize="30px"
                           >
-                            {state.typedesk}
+                            <b>PMS Type - {state.type}</b> <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12} >
+                          <Typography
+                            variant="p"
+                            fontSize="20px"
+                            color="#503C3C"
+                          >
+                            {state.pmsdeskx} <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12} paddingTop="10px">
+                          <Typography
+                            variant="p "
+                            color="#C16C6C"
+                            fontSize="20px"
+                          >
+                            <b>Gejala </b> <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                          <Typography
+                            variant="p"
+                            fontSize="20px"
+                            color="#503C3C"
+                          >
+                            {state.gejaladesk} <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12} paddingTop="10px">
+                          <Typography
+                            variant="p "
+                            color="#C16C6C"
+                            fontSize="20px"
+                          >
+                            <b>Penyebab </b> <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                          <Typography
+                            variant="p"
+                            fontSize="20px"
+                            color="#503C3C"
+                          >
+                            {state.penyebabdesk} <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12} paddingTop="10px">
+                          <Typography
+                            variant="p "
+                            color="#C16C6C"
+                            fontSize="20px"
+                          >
+                            <b>Cara Penanganan Yang Tepat </b> <br />
+                          </Typography>
+                        </Grid>
+                        <Grid item xs={12} md={12}>
+                          <Typography
+                            variant="p"
+                            fontSize="20px"
+                            color="#503C3C"
+                          >
+                            {state.penanganandesk}
                           </Typography>
                         </Grid>
                       </Grid>
-                      <Typography
-                        variant="h5"
-                        color="#C16C6C"
-                        textAlign="center"
-                      >
-                        Dengan Persentase Terbesar :
-                      </Typography>
-                      <Box
-                        sx={{
-                          p: 2,
-                          width: "50px",
-                          height: "20px",
-                          background: "#C16C6C",
-                          color: "white",
-                          borderRadius: "10px",
-                        }}
-                      >
-                        {state.data}%
-                      </Box>
-                    </Grid>
-                  </Box>
+                    </Box>
+                  </Grid>
                 </Grid>
-                <Grid item xs={12} md={3}>
-                  <Box
-                    sx={{
-                      p: 2,
-                      border: "2px solid #C16C6C",
-                      width: "740px",
-                      height: "482px",
-                      marginTop: "40px",
-                      borderRadius: "10px",
-                    }}
-                  >
-                    <Typography variant="p" color="#6F5A5A" fontSize="30px">
-                      <b>PMS Type - {state.type}</b> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="20px" color="#503C3C">
-                      {state.pmsdeskx} <br />
-                    </Typography>
-                    <Typography variant="p " color="#C16C6C" fontSize="20px">
-                      <b>Gejala </b> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="20px" color="#503C3C">
-                      {state.gejaladesk} <br />
-                    </Typography>
-                    <Typography variant="p " color="#C16C6C" fontSize="20px">
-                      <b>Penyebab </b> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="20px" color="#503C3C">
-                      {state.penyebabdesk} <br />
-                    </Typography>
-                    <Typography variant="p " color="#C16C6C" fontSize="20px">
-                      <b>Cara Penanganan Yang Tepat </b> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="20px" color="#503C3C">
-                      {state.penanganandesk}
-                    </Typography>
-                  </Box>
-                </Grid>
-              </Grid>
-            </Paper>
+              </Paper>
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
