@@ -141,6 +141,18 @@ const Daftar = () => {
             "Gejala ini timbul akibat ketidakseimbangan hormon estrogen dan progesteron: hormon estrogen terlalu tinggi dibandingkkan dengan hormon progestron";
           penanganan =
             "Pemberian Hormon progestron kadang dillakukan untuk mengurangi gejala, tetapi beberapa peneliti mengatakan, pada penderita PMS bisa kekurangan vitamin B6 dan magnesium. Penderita PMS A sebaiknya banyak mengonsumsi makanan berserat dan mengurangi atau membatasi minum kopi. ";
+          history.push({
+            pathname: "/Hasil",
+            state: {
+              data: parseFloat(persen * 100).toFixed(2),
+              type: tipe,
+              typedesk: tipedesk,
+              pmsdeskx: pmsdesk,
+              gejaladesk: gejala,
+              penyebabdesk: penyebab,
+              penanganandesk: penanganan,
+            },
+          });
         } else if (hasilprediksi == 2) {
           persen = result.probabilities[1];
           tipe = "H";
@@ -153,6 +165,18 @@ const Daftar = () => {
             "Pembengkakan itu terjadi akibat berkumpulnya air pada jaringan diluar sel (ekstrasel) karena tingginya asupan garam atau gula pada diet penderita.";
           penanganan =
             "Untuk mencegah terjadinya gejala ini penderita dianjurkan mengurangi asupan garam dan gula pada diet makanan serta membatasi minum sehari-hari.";
+          history.push({
+            pathname: "/Hasil",
+            state: {
+              data: parseFloat(persen * 100).toFixed(2),
+              type: tipe,
+              typedesk: tipedesk,
+              pmsdeskx: pmsdesk,
+              gejaladesk: gejala,
+              penyebabdesk: penyebab,
+              penanganandesk: penanganan,
+            },
+          });
         } else if (hasilprediksi == 3) {
           tipe = "C";
           tipedesk = "(Craving)";
@@ -165,6 +189,18 @@ const Daftar = () => {
             "Rasa ingin menyantap makanan tak terkendali dapat disebabkan oleh stres, tinggi garam dalam diet makanan, tidak terpenuhinya asam lemak esensial (omega 6) atau kurangnya magnesium";
           penanganan =
             "Untuk mencegah terjadinya gejala ini penderita dianjurkan mengurangi asupan garam dan gula pada diet makanan serta membatasi minum sehari-hari";
+          history.push({
+            pathname: "/Hasil",
+            state: {
+              data: parseFloat(persen * 100).toFixed(2),
+              type: tipe,
+              typedesk: tipedesk,
+              pmsdeskx: pmsdesk,
+              gejaladesk: gejala,
+              penyebabdesk: penyebab,
+              penanganandesk: penanganan,
+            },
+          });
         } else if (hasilprediksi == 4) {
           tipe = "D";
           tipedesk = "(Depression)";
@@ -177,22 +213,55 @@ const Daftar = () => {
             "PMS Tipe D murni disebabkan oleh ketidakseimbangan hormon hestrogen dalam siklus haid terlalu tinggi dibandingkan dengan hormon estrogennya.";
           penanganan =
             "Saat anda mengalami tipe PMS yang ini lebih baik memperbanyak mengonsumsi sayur-sayuran ataupun kacang-kacangan yang kaya akan magnesium agar kondisi hati anda lebih stabil";
+          history.push({
+            pathname: "/Hasil",
+            state: {
+              data: parseFloat(persen * 100).toFixed(2),
+              type: tipe,
+              typedesk: tipedesk,
+              pmsdeskx: pmsdesk,
+              gejaladesk: gejala,
+              penyebabdesk: penyebab,
+              penanganandesk: penanganan,
+            },
+          });
         } else {
+          history.push("/prediksi");
           console.log("persen: ", persen);
+          const docRef = addDoc(collection(db, "daftardiagnosa"), {
+            _sensitif: state.sensitif,
+            _labil: state.labil,
+            _cemas: state.cemas,
+            _saraf: state.saraf,
+            _depresiri: state.depresiri,
+            _nyeri: state.nyeri,
+            _endema: state.endema,
+            _perut: state.perut,
+            _berat: state.berat,
+            _bengkak: state.bengkak,
+            _pusing: state.pusing,
+            _lapar: state.Lapar,
+            _jantung: state.jantung,
+            _pinsang: state.pinsang,
+            _depresi: state.depresi,
+            _tidur: state.tidur,
+            _stres: state.stres,
+            _verbalisasi: state.verbalisasi,
+            _menangis: state.menangis,
+            _pelupa: state.pelupa,
+            _lemah: state.lemah,
+            _bingung: state.bingung,
+            _bundir: state.bundir,
+            persentase: persen,
+            tipe_pms: tipedesk,
+            nama_pasien: diagnosas.namap,
+            tanggal_lahir: diagnosas.tglp,
+            alamat: diagnosas.alamatp,
+            usia: diagnosas.usiap,
+            no_hp: diagnosas.hpp,
+          });
         }
 
-        history.push({
-          pathname: "/Hasil",
-          state: {
-            data: parseFloat(persen * 100).toFixed(2),
-            type: tipe,
-            typedesk: tipedesk,
-            pmsdeskx: pmsdesk,
-            gejaladesk: gejala,
-            penyebabdesk: penyebab,
-            penanganandesk: penanganan,
-          },
-        });
         const docRef = addDoc(collection(db, "daftardiagnosa"), {
           _sensitif: state.sensitif,
           _labil: state.labil,
@@ -252,9 +321,8 @@ const Daftar = () => {
             color="white"
             style={{
               marginLeft: "30px",
-              textShadow:"2px 2px #8E7F7F"
+              textShadow: "2px 2px #8E7F7F",
             }}
-            
           >
             <b>DIAGNOSA PREMENSTRUAL SYNDROME</b>
           </Typography>
@@ -268,13 +336,14 @@ const Daftar = () => {
                 }}
               >
                 <Grid container xs={12} md={12} justifyContent="center">
-                
                   <Grid item xs={11.7} md={11.7} paddingTop="10px">
                     <Typography variant="p" fontSize="25px" color="#6F5A5A">
                       <b>Pilih Gejala</b>
                     </Typography>
                   </Grid>
-                  <br/><br/><br/>
+                  <br />
+                  <br />
+                  <br />
                   <Grid item xs={11.7} md={11.7}>
                     <Box>
                       <FormControl
@@ -282,7 +351,6 @@ const Daftar = () => {
                         component="fieldset"
                         variant="standard"
                         size="small"
-                        
                       >
                         <FormGroup>
                           <Grid
@@ -296,14 +364,12 @@ const Daftar = () => {
                             <Grid item xs={12} md={4}>
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
-                                
                                   control={
                                     <Checkbox
                                       checked={sensitif}
                                       onChange={handleChange}
                                       name="sensitif"
                                       // color="#8E7F7F"
-                                      
                                     />
                                   }
                                   label="Sensitif"

@@ -8,6 +8,7 @@ import gejalapms from "./gejalapms";
 import Hasil from "./Hasil";
 import infopakar from "./infopakar";
 import Informasi from "./Informasi";
+import Tdkpms from "./Tdkpms";
 
 const RouterConfig = () => {
   return (
@@ -20,6 +21,7 @@ const RouterConfig = () => {
           <Route path="/Bantuan" component={Bantuan} />
           <Route path="/daftar" component={Daftar} />
           <Route path="/Hasil" component={Hasil} />
+          <Route path="/prediksi" component={Tdkpms} />
           <Route path="/gejala pms" component={gejalapms} />
           <Route path="/info pakar" component={infopakar} />
         </Switch>
