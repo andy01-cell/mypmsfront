@@ -208,7 +208,7 @@ const Daftar = () => {
           pmsdesk =
             "Saat anda mengalami PMS tipe D biasanya anda akan lebih emosional hingga sulit tidur dan terus-menerus ingin menangis";
           gejala =
-            "PMS tipe D (Depression) ditandai dengan gejala seperti rasa depresi, ingin menangis, lemah, gangguan tidur, pelupa, bingung, sulit dalam mengucapkan kata-kata (Verbalisasi), bahkan kadang-kadang muncul rasa ingin bunuh diri atau mencoba bunuh diri. Biasanya PMS Tipe D berlangsung bersamaan dengan tipe A";
+            "PMS tipe D (Depression) ditandai dengan gejala seperti rasa depresi, ingin menangis, lemah, gangguan tidur, pelupa, bingung, sulit dalam mengucapkan kata-kata (Verbalisasi), bahkan kadang-kadang muncul rasa males gerak (mageran). Biasanya PMS Tipe D berlangsung bersamaan dengan tipe A";
           penyebab =
             "PMS Tipe D murni disebabkan oleh ketidakseimbangan hormon hestrogen dalam siklus haid terlalu tinggi dibandingkan dengan hormon estrogennya.";
           penanganan =
@@ -637,7 +637,7 @@ const Daftar = () => {
                                       name="bundir"
                                     />
                                   }
-                                  label="Rasa Ingin Bunuh diri"
+                                  label="Mageran"
                                 />
                               </Grid>
                               <Button
