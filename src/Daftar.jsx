@@ -119,7 +119,7 @@ const Daftar = () => {
 
     console.log(state);
     axios
-      .post("http://localhost:4700/identification/analyzer", {
+      .post("http://pmssvm.herokuapp.com/identification/analyzer", {
         test: state,
         headers: {
           "Content-Type": "multipart/form-data",
