@@ -143,7 +143,7 @@ const Hasil = () => {
                         <b>Dengan Persentase Terbesar :</b>
                       </Typography>
                     </Grid>
-                    <Grid item xs={2.5} md={2.5} marginTop="10px">
+                    <Grid item xs={3} md={3} marginTop="10px">
                       <Box
                         sx={{
                           p: 2,
