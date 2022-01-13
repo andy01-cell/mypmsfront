@@ -200,8 +200,8 @@ const gejalapms = () => {
                       PMS tipe D (Depression) ditandai dengan gejala seperti
                       rasa depresi, ingin menangis, lemah, gangguan tidur,
                       pelupa, bingung, sulit dalam mengucapkan kata-kata
-                      (Verbalisasi), bahkan kadang-kadang muncul rasa ingin
-                      bunuh diri atau mencoba bunuh diri. Biasanya PMS Tipe D
+                      (Verbalisasi), bahkan kadang-kadang muncul rasa males 
+                      gerak (mageran). Biasanya PMS Tipe D
                       berlangsung bersamaan dengan tipe A <br />
                     </Typography>
                     <Typography variant="p " color="#C16C6C" fontSize="20px">
