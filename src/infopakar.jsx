@@ -32,14 +32,14 @@ const infopakar = () => {
             <b>INFORMASI PAKAR</b>
           </Typography>
           <Grid container justifyContent="center">
-            <Grid item marginTop="20px" xs={11.5} md={11.5}>
+            <Grid item marginTop="20px" xs={12} md={11.5}>
               <Paper
                 elevation={2}
                 style={{
                   marginLeft: 25,
                   marginRight: 25,
                   padding: 8,
-                  height: "70vh",
+                  height: { xs: "50vh", md: "100vh" },
                   // marginBottom: "32px",
                 }}
               >
@@ -53,8 +53,13 @@ const infopakar = () => {
                 >
                   <Grid item xs={0.2} md={0.2} />
                   <Grid item xs={12} md={3} paddingTop="20px">
-                    <Grid container justifyContent="center" direction="row">
-                      <Grid item>
+                    <Grid
+                      container
+                      justifyContent="center"
+                      direction="row"
+                      xs={12}
+                    >
+                      <Grid item xs={12}>
                         <Avatar
                           alt="Remy Sharp"
                           src={dokterwanita}
@@ -84,23 +89,111 @@ const infopakar = () => {
                     </Grid>
                   </Grid>
                   <Grid item xs={0} md={0.5}></Grid>
-                  <Grid item xs={11.8} md={8} paddingTop="20px">
-                    <Typography variant="p" fontSize="23px" color="#503C3C">
-                      <b>Nama</b> &emsp;&emsp;&emsp;&emsp; : Dr. Wahyuni
-                      <br /> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="23px" color="#503C3C">
-                      <b>Jenis Kelamin</b>&emsp;: Perempuan
-                      <br /> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="23px" color="#503C3C">
-                      <b>Alamat</b>&emsp;&emsp;&emsp;&emsp;: Bulo-bulo, Bulukumpa, Kab.Bulukumba
-                      <br /> <br />
-                    </Typography>
-                    <Typography variant="p" fontSize="23px" color="#503C3C">
-                      <b>Tempat</b>&emsp;&emsp;&emsp;&emsp;: Klinik Naufal, Puskesmas Bontobangun Bulukumba
-                      <br /> <br />
-                    </Typography>
+                  <Grid item xs={12} md={8} paddingTop="45px">
+                    <Grid container xs={12} md={12}>
+                      <Grid item xs={3.5} md={2.5}>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>Nama</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>Jenis Kelamin</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>Alamat</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>tempat</b>
+                          <br /> <br />
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={0.2} md={0.2}>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>:</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>:</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>:</b>
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          <b>:</b>
+                          <br /> <br />
+                        </Typography>
+                      </Grid>
+                      <Grid item xs={8.3} md={9.3}>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          Dr. Wahyuni
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          Perempuan
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "13px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          Bulo-bulo, Bulukumpa, Kab.Bulukumba
+                          <br /> <br />
+                        </Typography>
+                        <Typography
+                          variant="p"
+                          fontSize={{ xs: "14px", md: "23px" }}
+                          color="#503C3C"
+                        >
+                          Klinik Naufal, Puskesmas Bontobangun Bulukumba
+                          <br /> <br />
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </Grid>
                 </Grid>
               </Paper>
