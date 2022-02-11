@@ -138,7 +138,7 @@ const Daftar = () => {
           gejala =
             "PMS tipe A (Anxiety) ditandai dengan gejala seperti rasa cemas, sensitif, saraf tegang, persaan labil. Bahkan beberapa wanita mengalami depresi ringan sampai sedang saat sebelum mendapat haid.";
           penyebab =
-            "Gejala ini timbul akibat ketidakseimbangan hormon estrogen dan progesteron: hormon estrogen terlalu tinggi dibandingkkan dengan hormon progestron";
+            "Gejala ini timbul akibat ketidakseimbangan hormon estrogen dan progesteron: hormon estrogen terlalu tinggi dibandingkan dengan hormon progestron dan jika dibiarkan akan beresiko terkena penyakit kanker payudara.";
           penanganan =
             "Pemberian Hormon progestron kadang dillakukan untuk mengurangi gejala, tetapi beberapa peneliti mengatakan, pada penderita PMS bisa kekurangan vitamin B6 dan magnesium. Penderita PMS A sebaiknya banyak mengonsumsi makanan berserat dan mengurangi atau membatasi minum kopi. ";
           history.push({
@@ -384,7 +384,7 @@ const Daftar = () => {
                                       name="labil"
                                     />
                                   }
-                                  label="Perasaan Labil"
+                                  label="Perasaan labil"
                                 />
                               </Grid>
                               <Grid item xs={12} md={12}>
@@ -396,7 +396,7 @@ const Daftar = () => {
                                       name="cemas"
                                     />
                                   }
-                                  label="Perasaan Cemas"
+                                  label="Perasaan cemas"
                                 />
                               </Grid>
                               <Grid item xs={12} md={12}>
@@ -408,7 +408,7 @@ const Daftar = () => {
                                       name="saraf"
                                     />
                                   }
-                                  label="Saraf Tegang"
+                                  label="Saraf tegang"
                                 />
                               </Grid>
                               <FormControlLabel
@@ -419,7 +419,7 @@ const Daftar = () => {
                                     name="depresiri"
                                   />
                                 }
-                                label="Depresi Ringan"
+                                label="Depresi ringan"
                               />
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
@@ -430,7 +430,7 @@ const Daftar = () => {
                                       name="nyeri"
                                     />
                                   }
-                                  label="Nyeri Pada Payudara"
+                                  label="Nyeri pada payudara"
                                 />
                               </Grid>
                               <FormControlLabel
@@ -441,7 +441,7 @@ const Daftar = () => {
                                     name="endema"
                                   />
                                 }
-                                label="Endema (Pembengkakan)"
+                                label="Endema (pembengkakan)"
                               />
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
@@ -452,7 +452,7 @@ const Daftar = () => {
                                       name="perut"
                                     />
                                   }
-                                  label="perut kembung"
+                                  label="Perut kembung"
                                 />
                               </Grid>
                               <FormControlLabel
@@ -463,7 +463,7 @@ const Daftar = () => {
                                     name="berat"
                                   />
                                 }
-                                label="Peningkatan Berat Badan"
+                                label="Peningkatan berat dadan"
                               />
                             </Grid>
                             <Grid item xs={12} md={4}>
@@ -475,7 +475,7 @@ const Daftar = () => {
                                     name="bengkak"
                                   />
                                 }
-                                label="Pembengkakan Tangan dan Kaki"
+                                label="Pembengkakan tangan dan kaki"
                               />
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
@@ -486,7 +486,7 @@ const Daftar = () => {
                                       name="pusing"
                                     />
                                   }
-                                  label="Pusing Kepala"
+                                  label="Pusing kepala"
                                 />
                               </Grid>
                               <FormControlLabel
@@ -497,7 +497,7 @@ const Daftar = () => {
                                     name="Kelelahan"
                                   />
                                 }
-                                label="Sering Kelelahan"
+                                label="Sering kelelahan"
                               />
                               <FormControlLabel
                                 control={
@@ -507,7 +507,7 @@ const Daftar = () => {
                                     name="Lapar"
                                   />
                                 }
-                                label="Rasa Lapar Terus-menerus/Nafsu makan bertambah"
+                                label="Rasa lapar terus-menerus/nafsu makan bertambah"
                               />
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
@@ -518,7 +518,7 @@ const Daftar = () => {
                                       name="jantung"
                                     />
                                   }
-                                  label="Jantung Berdebar Kencang"
+                                  label="Jantung berdebar kencang"
                                 />
                               </Grid>
                               <Grid item xs={12} md={12}>
@@ -530,7 +530,7 @@ const Daftar = () => {
                                       name="pinsang"
                                     />
                                   }
-                                  label="pinsang"
+                                  label="Pingsan"
                                 />
                               </Grid>
                               <Grid item xs={12} md={12}>
@@ -554,7 +554,7 @@ const Daftar = () => {
                                       name="tidur"
                                     />
                                   }
-                                  label="Gangguan Tidur"
+                                  label="Gangguan tidur"
                                 />
                               </Grid>
                             </Grid>
@@ -578,7 +578,7 @@ const Daftar = () => {
                                     name="verbalisasi"
                                   />
                                 }
-                                label="Sulit Dalam Mengucapkan Kata-Kata (Verbalisasi)"
+                                label="Sulit dalam mengucapkan kata-kata (verbalisasi)"
                               />
                               <Grid item xs={12} md={12}>
                                 <FormControlLabel
@@ -589,7 +589,7 @@ const Daftar = () => {
                                       name="menangis"
                                     />
                                   }
-                                  label="Ingin Menangis"
+                                  label="Ingin menangis"
                                 />
                               </Grid>
                               <Grid item xs={12} md={12}>
@@ -637,7 +637,7 @@ const Daftar = () => {
                                       name="bundir"
                                     />
                                   }
-                                  label="Mageran"
+                                  label="Mager"
                                 />
                               </Grid>
                               <Button
