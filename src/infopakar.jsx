@@ -1,14 +1,15 @@
 import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import { Paper } from "@mui/material";
+import { Box, Paper } from "@mui/material";
 import { dokterpria, dokterwanita, pms } from "./assets";
 import Avatar from "@mui/material/Avatar";
+import { borderRadius } from "@mui/system";
 
 const infopakar = () => {
   return (
     <div>
-      <Grid container>
+      <Grid container xs={12} md={12}>
         <Grid
           item
           xs={12}
@@ -16,7 +17,6 @@ const infopakar = () => {
           style={{
             background: "#C16C6C",
             height: "70vh",
-            width: "100vw",
             paddingTop: "15vh",
           }}
         >
@@ -25,175 +25,267 @@ const infopakar = () => {
             textAlign="center"
             color="white"
             style={{
-              marginLeft: "30px",
               textShadow: "2px 2px #8E7F7F",
             }}
           >
             <b>INFORMASI PAKAR</b>
           </Typography>
-          <Grid container justifyContent="center">
+          <Grid container xs={12} md={12} justifyContent="center">
             <Grid item marginTop="20px" xs={12} md={11.5}>
               <Paper
                 elevation={2}
-                style={{
-                  marginLeft: 25,
-                  marginRight: 25,
-                  padding: 8,
-                  height: { xs: "50vh", md: "100vh" },
-                  // marginBottom: "32px",
+                sx={{
+                  height: "65vh",
                 }}
               >
                 <Grid
                   container
-                  marginTop="0ch"
+                  justifyContent="center"
+                  marginTop="10px"
                   direction={{
                     xs: "column",
                     md: "row",
                   }}
+                  xs={12}
+                  md={12}
                 >
-                  <Grid item xs={0.2} md={0.2} />
-                  <Grid item xs={12} md={3} paddingTop="20px">
-                    <Grid
-                      container
-                      justifyContent="center"
-                      direction="row"
-                      xs={12}
+                  <Grid item xs={12} md={7} marginTop="30px">
+                    <Box
+                      sx={{
+                        border: "3px solid #BEBBBB",
+                        borderRadius: "30px",
+                      }}
                     >
-                      <Grid item xs={12}>
-                        <Avatar
-                          alt="Remy Sharp"
-                          src={dokterwanita}
-                          sx={{
-                            width: {
-                              md: 250,
-                              xs: 290,
-                            },
-                            height: {
-                              md: 250,
-                              xs: 290,
-                            },
-                          }}
-                        />
+                      <Grid container xs={12} md={12}>
+                        <Grid item xs={12} md={3}>
+                          <Avatar
+                            alt="Remy Sharp"
+                            src={dokterwanita}
+                            sx={{
+                              width: {
+                                md: 150,
+                                xs: 290,
+                              },
+                              height: {
+                                md: 150,
+                                xs: 290,
+                              },
+                            }}
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={9} paddingTop="20px">
+                          <Grid container xs={12} md={12}>
+                            <Grid item xs={3.5} md={12}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "23px" }}
+                                color="#7E7474"
+                              >
+                                <b>PAKAR 1</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={3.5} md={3}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Nama</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Jenis Kelamin</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Alamat</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={0.2} md={0.2}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={8.3} md={8.8}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                Dr. Marhamah, Sp. OG.
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                Perempuan
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "13px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                RS Awal Bros Makassar
+                                <br />
+                              </Typography>
+                            </Grid>
+                          </Grid>
+                        </Grid>
                       </Grid>
-                      <Grid item>
-                        <Typography
-                          variant="p"
-                          fontSize="25px"
-                          color="#503C3C"
-                          textAlign="center"
-                        >
-                          {/* nama pakar */}
-                          Dr.Wahyuni
-                        </Typography>
-                      </Grid>
-                    </Grid>
+                    </Box>
                   </Grid>
-                  <Grid item xs={0} md={0.5}></Grid>
-                  <Grid item xs={12} md={8} paddingTop="45px">
-                    <Grid container xs={12} md={12}>
-                      <Grid item xs={3.5} md={2.5}>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>Nama</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>Jenis Kelamin</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>Alamat</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>tempat</b>
-                          <br /> <br />
-                        </Typography>
+                  <Grid item xs={12} md={7} marginTop="30px">
+                    <Box
+                      sx={{
+                        border: "3px solid #BEBBBB",
+                        borderRadius: "30px",
+                      }}
+                    >
+                      <Grid container xs={12} md={12}>
+                        <Grid item xs={12} md={3}>
+                          <Avatar
+                            alt="Remy Sharp"
+                            src={dokterwanita}
+                            sx={{
+                              width: {
+                                md: 150,
+                                xs: 290,
+                              },
+                              height: {
+                                md: 150,
+                                xs: 290,
+                              },
+                            }}
+                          />
+                        </Grid>
+                        <Grid item xs={12} md={9} paddingTop="20px">
+                          <Grid container xs={12} md={12}>
+                            <Grid item xs={3.5} md={12}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "23px" }}
+                                color="#7E7474"
+                              >
+                                <b>PAKAR 2</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={3.5} md={3}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Nama</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Jenis Kelamin</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>Alamat</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={0.2} md={0.2}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                <b>:</b>
+                                <br />
+                              </Typography>
+                            </Grid>
+                            <Grid item xs={8.3} md={8.8}>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                Dr. Wahyuni
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "14px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                Perempuan
+                                <br />
+                              </Typography>
+                              <Typography
+                                variant="p"
+                                fontSize={{ xs: "13px", md: "18px" }}
+                                color="#7E7474"
+                              >
+                                Klinik Naufal Bulukumba
+                                <br />
+                              </Typography>
+                            </Grid>
+                          </Grid>
+                        </Grid>
                       </Grid>
-                      <Grid item xs={0.2} md={0.2}>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>:</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>:</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>:</b>
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          <b>:</b>
-                          <br /> <br />
-                        </Typography>
-                      </Grid>
-                      <Grid item xs={8.3} md={9.3}>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          Dr. Wahyuni
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          Perempuan
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "13px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          Bulo-bulo, Bulukumpa, Kab.Bulukumba
-                          <br /> <br />
-                        </Typography>
-                        <Typography
-                          variant="p"
-                          fontSize={{ xs: "14px", md: "23px" }}
-                          color="#503C3C"
-                        >
-                          Klinik Naufal, Puskesmas Bontobangun Bulukumba
-                          <br /> <br />
-                        </Typography>
-                      </Grid>
-                    </Grid>
+                    </Box>
                   </Grid>
                 </Grid>
               </Paper>

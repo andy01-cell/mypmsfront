@@ -116,6 +116,12 @@ const Daftar = () => {
     let gejala;
     let penyebab;
     let penanganan;
+    let vit6;
+    let deskvit6;
+    let magnesium;
+    let deskmagnesium;
+    let serat;
+    let deskserat;
 
     console.log(state);
     axios
@@ -141,6 +147,15 @@ const Daftar = () => {
             "Gejala ini timbul akibat ketidakseimbangan hormon estrogen dan progesteron: hormon estrogen terlalu tinggi dibandingkan dengan hormon progestron dan jika dibiarkan akan beresiko terkena penyakit kanker payudara.";
           penanganan =
             "Pemberian Hormon progestron kadang dillakukan untuk mengurangi gejala, tetapi beberapa peneliti mengatakan, pada penderita PMS bisa kekurangan vitamin B6 dan magnesium. Penderita PMS A sebaiknya banyak mengonsumsi makanan berserat dan mengurangi atau membatasi minum kopi. ";
+          vit6 = "Contoh makanan yang mengandung Vitamin B6 :";
+          deskvit6 =
+            "susu, kacang polong, ubi, alpukat, pisang, daging sapi, tahu, salmon, telur, wortel, bayam, keju dan tuna";
+          magnesium = "Contoh makanan yang mengandung magnesium tinggi :";
+          deskmagnesium =
+            "Coklat hitam, pisang, tahu, tempe, gandum, kacang-kacangan, ikan dan alpukat";
+          serat = "Contoh makanan yang mengandung Serat tinggi :";
+          deskserat =
+            "Alpukat, jagung, kacang-kacangan, brokoli, tomat, beras merah";
           history.push({
             pathname: "/Hasil",
             state: {
@@ -151,6 +166,12 @@ const Daftar = () => {
               gejaladesk: gejala,
               penyebabdesk: penyebab,
               penanganandesk: penanganan,
+              vit: vit6,
+              deskvit: deskvit6,
+              magne: magnesium,
+              deskmagne: deskmagnesium,
+              serhat: serat,
+              deskserhat: deskserat,
             },
           });
         } else if (hasilprediksi == 2) {
@@ -189,6 +210,12 @@ const Daftar = () => {
             "Rasa ingin menyantap makanan tak terkendali dapat disebabkan oleh stres, tinggi garam dalam diet makanan, tidak terpenuhinya asam lemak esensial (omega 6) atau kurangnya magnesium";
           penanganan =
             "Untuk mencegah terjadinya gejala ini penderita dianjurkan mengurangi asupan garam dan gula pada diet makanan serta membatasi minum sehari-hari";
+          vit6 = "Contoh makanan yang mengandung omega 6 :";
+          deskvit6 =
+            "Tahu, Kacang kenari, minyak safflower, biji bunga matahari, selai kacang, minyak alpukat, telur, almond";
+          magnesium = "Contoh makanan yang mengandung magnesium :";
+          deskmagnesium =
+            "Coklat hitam, pisang, tahu, tempe, gandum, kacang-kacangan, ikan dan alpukat";
           history.push({
             pathname: "/Hasil",
             state: {
@@ -199,6 +226,10 @@ const Daftar = () => {
               gejaladesk: gejala,
               penyebabdesk: penyebab,
               penanganandesk: penanganan,
+              vit: vit6,
+              deskvit: deskvit6,
+              magne: magnesium,
+              deskmagne: deskmagnesium,
             },
           });
         } else if (hasilprediksi == 4) {

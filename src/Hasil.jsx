@@ -74,6 +74,7 @@ const Hasil = () => {
                       p: 2,
                       border: "2px solid #C16C6C",
                       borderRadius: "10px",
+                      maxHeight: "70vh"
                     }}
                   >
                     <Grid item xs={12} md={12}>
@@ -161,7 +162,7 @@ const Hasil = () => {
                   <Grid
                     container
                     xs={12}
-                    md={6}
+                    md={8}
                     sx={{
                       p: 2,
                       border: "2px solid #C16C6C",
@@ -210,6 +211,42 @@ const Hasil = () => {
                     <Grid item xs={12} md={12}>
                       <Typography variant="p" fontSize="20px" color="#503C3C">
                         {state.penanganandesk}
+                      </Typography>
+                    </Grid>
+                    <br /><br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                       <b> {state.vit}</b>
+                      </Typography>
+                    </Grid>
+                    <br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                        {state.deskvit}
+                      </Typography>
+                    </Grid>
+                    <br /><br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                        <b>{state.magne}</b>
+                      </Typography>
+                    </Grid>
+                    <br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                        {state.deskmagne}
+                      </Typography>
+                    </Grid>
+                    <br /><br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                        <b>{state.serhat}</b>
+                      </Typography>
+                    </Grid>
+                    <br />
+                    <Grid item xs={12} md={12}>
+                      <Typography variant="p" fontSize="20px" color="#503C3C">
+                        {state.deskserhat}
                       </Typography>
                     </Grid>
                   </Grid>

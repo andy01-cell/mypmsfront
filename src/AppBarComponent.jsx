@@ -84,7 +84,7 @@ const AppBarComponent = () => {
           <Grid item xs={10} md={12}>
             <nav>
               <Grid container justifyContent="end">
-                <Grid item xs={4} md={1.85} onClick={() => informasiklik("nyala1")}>
+                <Grid item xs={4} md={1.85} onClick={() => informasiklik("nyala1")} >
                   <Typography
                     // <<<<<<< HEAD
                     variant="h6"
